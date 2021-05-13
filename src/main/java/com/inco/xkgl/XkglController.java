@@ -16,8 +16,8 @@ public class XkglController {
 
 
 
+    //@HystrixCommand(fallbackMethod = "callXtgl")
     @GetMapping("xkgl")
-    @HystrixCommand(fallbackMethod = "callXtgl")
     public void xkgl(){
         restTemplate.getForObject("http://INCO-XTGL/xtgl/xtgl", String.class);
 
